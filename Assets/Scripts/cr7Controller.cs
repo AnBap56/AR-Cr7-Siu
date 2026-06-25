@@ -21,12 +21,15 @@ public class cr7Controller : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
+    private void Update()
+    {
+        Siu();
+    }
+
     private void FixedUpdate()
     {
         if(!canMove) 
             return;
-            
-        Siu();
 
         float x = tIS.MoveDirection.x;
         float y = tIS.MoveDirection.y;
@@ -51,6 +54,8 @@ public class cr7Controller : MonoBehaviour
     {
         if(tIS.GetSkillAction("Siu"))
         {
+            transform.Rotate(0f, 180f, 0f);
+            
             animator.SetTrigger("Siu");
             canMove = false;
         }

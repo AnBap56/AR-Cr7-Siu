@@ -21,7 +21,7 @@ public class ARTrackedImageSpawner : MonoBehaviour
         {
             cr7 = Instantiate(cr7Prefab, newImage.transform);
 
-            cr7.transform.localPosition = new Vector3(0, 0.1f, 0);
+            cr7.transform.localPosition = new Vector3(0, 0.05f, 0);
             cr7.transform.localRotation = Quaternion.identity;
             siu.PlayOneShot(audioClip);
         }
