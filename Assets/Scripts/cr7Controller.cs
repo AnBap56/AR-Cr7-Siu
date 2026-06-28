@@ -52,10 +52,13 @@ public class cr7Controller : MonoBehaviour
 
     private void Siu()
     {
-        if(tIS.GetSkillAction("Siu"))
+        if (!canMove)
+            return;
+
+        if (tIS.GetSkillAction("Siu"))
         {
             transform.Rotate(0f, 180f, 0f);
-            
+
             animator.SetTrigger("Siu");
             canMove = false;
         }
